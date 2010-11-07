@@ -31,7 +31,6 @@ class DefaultRouteExtension extends Extension
         if (!$container->hasDefinition('default_route_request_listener')) {
             $loader->load('web.xml');
         }
-
     }
 
     /**
@@ -46,7 +45,7 @@ class DefaultRouteExtension extends Extension
 
     public function getNamespace()
     {
-        return 'http://www.symfony-project.org/schema/dic/symfony';
+        return 'http://innx.co.jp/schema/dic/defaultroute';
     }
 
     public function getAlias()
