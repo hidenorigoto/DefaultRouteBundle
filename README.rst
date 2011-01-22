@@ -7,12 +7,14 @@ It routes automatically the url '/Hello/Hello/index' to index action of Hello co
 How to install
 --------------
 
-First, add this bundle to your project. If you use git, add this bundle to the submodule as follows.::
+First, add this bundle to your project. If you use git, add this bundle to the submodule as follows.
 
+::
     $ git submodule add git://github.com/hidenorigoto/DefaultRouteBundle.git src/Xnni/DefaultRouteBundle
 
-Then register this bundle in your AppKernel.::
+Then register this bundle in your AppKernel.
 
+::
     public function registerBundles()
     {
         $bundles = array(
@@ -21,13 +23,15 @@ Then register this bundle in your AppKernel.::
             // :
         );
 
-Finaly, enable this bundle in your config(config.yml) as follows.::
+Finaly, enable this bundle in your config(config.yml) as follows.
 
+::
     # defaultroute
     defaultroute.config: ~
 
-Note: Following new Symfony2 namespace convention, you have to add one line in the registerNamespaces() of your src/autoload.php.::
+Note: Following new Symfony2 namespace convention, you have to add one line in the registerNamespaces() of your src/autoload.php.
 
+::
     'Xnni'             => __DIR__,
 
 
@@ -36,11 +40,11 @@ How to use
 
 If you made your application in following condition,
 
-- bundle namespace: App\HelloBundle
+- bundle namespace: App\\HelloBundle (made via `init:bundle App\\HelloBUndle src/`)
 - controller: Default
 - action: indexAction
 
-then you can access this action with url such as 'http://localhost/app_dev.php/Hello/Default/index
+then you can access this action with url such as `http://localhost/app_dev.php/Hello/Default/index`
 
 - Currently, supports only App namespace
 
