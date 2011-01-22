@@ -9,12 +9,10 @@ How to install
 
 First, add this bundle to your project. If you use git, add this bundle to the submodule as follows.
 
-::
     $ git submodule add git://github.com/hidenorigoto/DefaultRouteBundle.git src/Xnni/DefaultRouteBundle
 
 Then register this bundle in your AppKernel.
 
-::
     public function registerBundles()
     {
         $bundles = array(
@@ -25,13 +23,11 @@ Then register this bundle in your AppKernel.
 
 Finaly, enable this bundle in your config(config.yml) as follows.
 
-::
     # defaultroute
     defaultroute.config: ~
 
 Note: Following new Symfony2 namespace convention, you have to add one line in the registerNamespaces() of your src/autoload.php.
 
-::
     'Xnni'             => __DIR__,
 
 
@@ -40,7 +36,7 @@ How to use
 
 If you made your application in following condition,
 
-- bundle namespace: App\\HelloBundle (made via `init:bundle App\\HelloBUndle src/`)
+- bundle namespace: App\\HelloBundle (made via `php app/console init:bundle App\\\\HelloBundle src/`)
 - controller: Default
 - action: indexAction
 
