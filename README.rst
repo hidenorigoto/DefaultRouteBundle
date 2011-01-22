@@ -26,6 +26,11 @@ Finaly, enable this bundle in your config(config.yml) as follows.::
     # defaultroute
     defaultroute.config: ~
 
+Note: Following new Symfony2 namespace convention, you have to add one line in the registerNamespaces() of your src/autoload.php.::
+
+    'Xnni'             => __DIR__,
+
+
 How to use
 ----------
 
