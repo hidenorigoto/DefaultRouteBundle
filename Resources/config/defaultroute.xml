@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://www.symfony-project.org/schema/dic/services http://www.symfony-project.org/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="default_route_request_listener.class">Bundle\DefaultRouteBundle\RequestListener</parameter>
+        <parameter key="default_route_request_listener.class">Xnni\DefaultRouteBundle\RequestListener</parameter>
     </parameters>
 
     <services>

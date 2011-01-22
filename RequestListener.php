@@ -1,6 +1,6 @@
 <?php
 
-namespace Bundle\DefaultRouteBundle;
+namespace Xnni\DefaultRouteBundle;
 
 use Symfony\Component\HttpKernel\Log\LoggerInterface;
 use Symfony\Component\EventDispatcher\Event;
@@ -37,9 +37,9 @@ class RequestListener
 
     public function resolve(Event $event)
     {
-        $request = $event->getParameter('request');
+        $request = $event->get('request');
 
-        if (HttpKernelInterface::MASTER_REQUEST === $event->getParameter('request_type')) {
+        if (HttpKernelInterface::MASTER_REQUEST === $event->get('request_type')) {
             // set the context even if the parsing does not need to be done
             // to have correct link generation
             $this->router->setContext(array(
@@ -62,7 +62,7 @@ class RequestListener
         }
 
         $controllerName = sprintf(
-            'Application\\%sBundle\\Controller\\%sController::%sAction',
+            'App\\%sBundle\\Controller\\%sController::%sAction',
             $parts[1],
             $parts[2],
             $parts[3]

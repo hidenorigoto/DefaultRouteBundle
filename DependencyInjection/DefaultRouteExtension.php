@@ -1,6 +1,6 @@
 <?php
 
-namespace Bundle\DefaultRouteBundle\DependencyInjection;
+namespace Xnni\DefaultRouteBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
@@ -8,8 +8,6 @@ use Symfony\Component\DependencyInjection\Resource\FileResource;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\Definition;
-use Symfony\Component\Finder\Finder;
-use Symfony\Component\HttpFoundation\RequestMatcher;
 
 /**
  * DefaultRouteExtension.
@@ -29,7 +27,7 @@ class DefaultRouteExtension extends Extension
         $loader = new XmlFileLoader($container, __DIR__.'/../Resources/config');
 
         if (!$container->hasDefinition('default_route_request_listener')) {
-            $loader->load('web.xml');
+            $loader->load('defaultroute.xml');
         }
     }
 
